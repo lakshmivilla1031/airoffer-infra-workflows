@@ -1,0 +1,22 @@
+---
+name: "AMI-01: Build Flavored Image"
+
+on:
+  repository_dispatch:
+    types: [generate_workflow]
+
+  workflow_dispatch:
+
+jobs:
+  display_default_usage:
+    name: Display default usage
+    runs-on:
+      - self-hosted
+      - base-runner
+    steps:
+      - name: Display usage
+        shell: bash
+        run: |
+          echo "================================================================================"
+          echo " Usage: Select from the branches drop-down the environment you want to deploy!! "
+          echo "================================================================================"
