@@ -21,7 +21,7 @@ on:
 jobs:
   call_generate_workflows:
     name: "Call workflow generator"
-    uses: "Tvlport-IAAS/iaas-workflows/.github/workflows/001_generate_workflows_wf.yml@main"
+    uses: "lakshmivilla1031/iaas-workflows/.github/workflows/001_generate_workflows_wf.yml@main"
     strategy:
       matrix:
         environment:
@@ -42,7 +42,7 @@ jobs:
   call_generate_workflows_main:
     name: "Call workflow generator main"
     needs: call_generate_workflows
-    uses: "Tvlport-IAAS/iaas-workflows/.github/workflows/001_generate_workflows_wf.yml@main"
+    uses: "lakshmivilla1031/iaas-workflows/.github/workflows/001_generate_workflows_wf.yml@main"
     with:
       namespace: "airoffer"
       tp_env: "main"
